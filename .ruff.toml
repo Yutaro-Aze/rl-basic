@@ -1,0 +1,27 @@
+# .ruff.toml
+
+# 対象Pythonバージョン
+target-version = "py312"
+
+# チェックを有効にするルールセット
+# E: pycodestyle (PEP8)
+# F: pyflakes
+# I: import sorting
+# B: flake8-bugbear
+# UP: pyupgrade
+select = ["E", "F", "I", "B", "UP"]
+
+# 除外するルール（必要に応じて調整）
+ignore = [
+    "E203",  # blackとの互換性（スライスのコロンの前後スペース）
+    "E501",  # 行の長さ制限（長めコメントや数式許容）
+]
+
+# 行の長さ上限
+line-length = 100
+
+# 自動修正を適用するかどうか
+fix = true
+
+# 未使用変数のプレフィックスを許可（_で始まるものはOK）
+dummy-variable-rgx = "^_"
